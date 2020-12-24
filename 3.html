@@ -40,33 +40,22 @@
       Kakao.Link.sendDefault({
         objectType: 'feed',
         content: {
-          title: '디저트 사진',
-          description: '아메리카노, 빵, 케익',
+          title: '패스트파이브 지인 추천 프로그램',
+          description: '패스트파이브를 추천받으셨습니다! 지금 방문 예약하고, 추가 할인 혜택도 받아가세요.',
           imageUrl:
-            'http://mud-kage.kakao.co.kr/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+            'https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c9e54d80-10cc-44b2-8307-a3bbbe99c2c3/fastfive_referral_main.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201224%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201224T034611Z&X-Amz-Expires=86400&X-Amz-Signature=41c6fb941faabfc9b7e410d1fa770d224c8db002be7e0f3d24d7c196061fbe0c&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22fastfive_referral_main.png%22',
           link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            androidExecParams: 'test',
+            mobileWebUrl: 'http://www.fastfive.co.kr/referral',
+            androidExecParams: '패스트파이브',
           },
-        },
-        social: {
-          likeCount: 10,
-          commentCount: 20,
-          sharedCount: 30,
         },
         buttons: [
           {
-            title: '웹으로 이동',
+            title: '신청하러 가기',
             link: {
-              mobileWebUrl: 'https://developers.kakao.com',
+              mobileWebUrl: 'http://www.fastfive.co.kr/referral',
             },
-          },
-          {
-            title: '앱으로 이동',
-            link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-            },
-          },
+          }
         ]
       });
     }
