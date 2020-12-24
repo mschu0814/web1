@@ -3,9 +3,22 @@
 <head>
   <title>WEB1 - JavaScript</title>
   <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+  <script>
+        // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+        Kakao.init('JAVASCRIPT_KEY');
+
+        // SDK 초기화 여부를 판단합니다.
+        console.log(Kakao.isInitialized());
+    </script>
 </head>
 <body>
   <h1><a href="index.html">WEB</a></h1>
+  <input id="night_day" type="button" value="night" onclick="
+    nightDayHandler(this);
+  ">
   <ol>
     <li><a href="1.html">HTML</a></li>
     <li><a href="2.html">CSS</a></li>
@@ -15,5 +28,49 @@
   <p>
     JavaScript (/ˈdʒɑːvəˌskrɪpt/[6]), often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
   </p>
+  <a id="kakao-link-btn" href="javascript:sendLink()">
+    <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+  </a>
+  <script type='text/javascript'>
+  //<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('8ba2a546c7437df5b7639bb8a01a4890');
+    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl: 'http://mud-kage.kakao.co.kr/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com'
+        }
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com'
+          }
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com'
+          }
+        }
+      ]
+    });
+  //]]>
+</script>
 </body>
 </html>
